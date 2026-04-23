@@ -16,31 +16,55 @@
         background-size:cover;
         }
 
-        #logbox{
+      
+        .logbox{
         background-color:rgba(255, 255, 255, 0.546);
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align:center;
         width:400px;
-        height:550px;
+        height:400px;
         margin-top:40px;
-        border: 1px solid rgba(255, 255, 255, 0.491)
+        border-radius:50px;
+        padding:20px;
+
         }
 
         #user{
         width:300px;
-
-
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgba(240, 248, 255, 0.651);
+        text-align:center;
+        margin-left:30px;
+        margin-right:50px;
         }
 
+        #pass{
+        width:300px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgba(240, 248, 255, 0.651);
+        text-align:center;
+        margin-left:30px;
+        margin-right:50px;
+        }
 
+        #footer{
+        background-color:#a2a7a9;
+        color:white;
+        text-align:center;
+        font-size:14px;
+        padding:15px 0;
+        box-shadow:0 8px 20px rgba(0,0,0,0.2);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
 
     </style>
 </head>
 <body>
 
     <center>
-    <div id="logbox">
+    <div class="logbox">
     <form>
+
         <h2>Login Form</h2>
         <label for="user">Username</label>
             <br>
@@ -53,37 +77,43 @@
             <input type="password" id="pass" class="form-control" placeholder="Enter your Password" required>
             <br> 
         
-        <p id="display"></p>
+        <p id="display" style="margin-left:20px;
+        margin-right:20px;"></p>
+
+        <div class="form-check form-switch d-inline-block  text-start">
+        <input class="form-check-input" type="checkbox" id="Stay">
+
+        <h6 style="font-size:15px;">Stay logged in on this account</h6>
+
+        <br>
 
 
-        <input type="button" name="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
+        <input type="button" name="button" id="login" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
 
+        <button type="button" onclick="window.location.reload()" class="btn btn-info rounded-5" >Cancel</button>
 
-         <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-5" >
+        
     </form>
     </div>
-</center>
 
     <script>
         let attempt_counter = 0;
 
 
         function authenticate(){
-            let username = document.getElementById("uname").value;
-            let pwd = document.getElementById("pwd").value;
+            let username = document.getElementById("user").value;
+            let pass = document.getElementById("pass").value;
             let granted = "Welcome " + username + "!";
-            let denied = "Access denied. Account locked after 3 attempts!";
+            let denied = "Access denied. Your account has been locked after 3 attempts. Wait 60 seconds before logging in again. ";
 
 
         while (attempt_counter < 3) {
-        if (username === "mrbeast67" && pwd === "12345678") {
+        if (username === "ILOVEICT" && pass === "#ICT") {
             alert(granted);
-            attempt_counter = 0; // reset attempts after successful login
+            attempt_counter = 0; 
             document.getElementById("display").innerHTML = "";
-            window.location.href = "index.html";
-
-
-            break; // stop loop
+            window.location.href = "notebooks.html";
+            break; 
         }
 
 
@@ -91,17 +121,22 @@
             attempt_counter++;
             document.getElementById("display").innerHTML =
                 "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
-            break; // stop loop for this click
-        }
-
+            break; 
 
         }
         if (attempt_counter >= 3) {
                 alert(denied);
-                document.getElementById("loginBTN").disabled = true; // disable button
+                document.getElementById("login").disabled = true; //lock
             }
         }
+
+    }
     </script>
-    
+
+
+<div id="footer" class="container-fluid">
+<p>© Almiron | 9 - Emerald</p>
+</div>
+
 </body>
 </html>
