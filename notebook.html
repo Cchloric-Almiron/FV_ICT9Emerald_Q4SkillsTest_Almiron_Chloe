@@ -27,7 +27,9 @@
     #footer{
     background-color:#c7d4d9b1;
     color:white;
+    height: 20px;
     text-align:center;
+    justify-content: center;
     font-size:14px;
     padding:15px 0;
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
@@ -36,7 +38,7 @@
 
       .sidenav {
   height: 100%;
-  width: 200px;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -66,21 +68,19 @@
 </head>
 <body>
 
+  <div class="row">
+    <div class="col-lg-3">
   <div class="sidenav">
   <a href="#">About</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
+    </div>
 
 <br>
-    <center>
-    <div id="banner">
-    <h1>Virtual Notebook</h1>  
-    </div>
-</center>
-    <br>
 
+<div class="col-lg-9">
  <div class="container-fluid">
         <div class="row gap-3 justify-content-center">
         <div class="col-lg-4  h-80" style="padding:20px; background-color:#ffffff40; box-shadow:0 6px 12px rgba(164, 164, 164, 0.404); border-radius:40px;"  style="height:100px;">
@@ -213,18 +213,18 @@
 
           </div>
 
-
-
-
         </div>
       </div>
-
+</div>
    <br>
+  
+
+<br><br><br>
 
 <div id="footer" class="container-fluid">
 <p>© Almiron | 9 - Emerald</p>
 </div>
-
+</div>
 
     
 </body>
