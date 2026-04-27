@@ -87,12 +87,11 @@
 
         <br>
 
+        <input type="button" name="button" id="login" value="Login" class="btn btn-info rounded-10 justify-content-center" onclick="authenticate()">
 
-        <input type="button" name="button" id="login" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
+        <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-10 justify-content-center">    
+    
 
-        <button type="button" onclick="window.location.reload()" class="btn btn-info rounded-5" >Cancel</button>
-
-        
     </form>
     </div>
 
@@ -129,14 +128,11 @@
                 document.getElementById("login").disabled = true; //lock
             }
         }
-
     }
     </script>
 
-
-<div id="footer" class="container-fluid">
-<p>© Almiron | 9 - Emerald</p>
 </div>
+
 
 </body>
 </html>
