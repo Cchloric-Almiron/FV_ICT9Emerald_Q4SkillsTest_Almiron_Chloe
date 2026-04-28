@@ -9,9 +9,9 @@
     <style>
 
     body{
-    background-image:url('https://i.pinimg.com/originals/ee/61/86/ee618684568dee23e0139fe67b618b23.gif');
+    background-image:url('https://i.pinimg.com/originals/f6/16/f2/f616f280a52b1d788c2f7a75da7ed333.gif');
     background-repeat:no-repeat;
-    background-size:100% 100%;
+    background-size:cover;
     background-position:center;
     }
 
@@ -38,33 +38,39 @@
     container:container-fluid;
     }
 
-      .sidenav {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #212934;
-  overflow-x: hidden;
-  padding-top: 20px;
+    .sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffffce;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow:0 6px 12px rgba(164, 164, 164, 0.404);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+    .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+  }
+
+    .main {
+    margin-left: 160px;
+    padding: 30px;
 }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ffffff;
-  display: block;
-}
-
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav /
-  font-size: 28px; / Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-
+    #open{
+      border-radius:20px;
+      width:250px;
+      background-color: rgba(250, 216, 252, 0.767);
+      border-color: rgba(240, 248, 255, 0.438);
+    }
 
     </style>
 </head>
@@ -73,6 +79,8 @@
   <div class="row">
     <div class="col-lg-2">
   <div class="sidenav">
+
+  <a class="navbar-brand" href="#"><img src="https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/8b5611eb-ff3a-407f-9adc-e116a23373fc/OBMC+LOGO+2024-04.png" style="width:200px; height:200px;"></a>
   <a href="#">About</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
@@ -82,32 +90,36 @@
 
 <br>
 
-<div class="col-lg-9">
+<div class="col-lg-9" style="margin-top:50px;">
  <div class="container-fluid">
         <div class="row gap-3 justify-content-center">
-        <div class="col-lg-4  h-80" style="padding:20px; background-color:#ffffff40; box-shadow:0 6px 12px rgba(164, 164, 164, 0.404); border-radius:40px;"  style="height:100px;">
+        <div class="col-lg-4  h-80" style="padding:20px; background-color:#ffffffa9; box-shadow:0 6px 12px rgba(164, 164, 164, 0.404);"  style="height:100px;">
 
         <br>
-            
-            <h2 style="text-align:center;">English</h3>
-            <h4 style="text-align:center;">Ms. Kristin Joy Avila</h4>
 
-        <button class="btn btn-info rounder-5">Open this notebook</button>
+            <h6 style>English</h3>
+            <h6 style>Ms. Kristin Joy Avila</h4>
+          
+        <img src="https://i.pinimg.com/736x/7a/86/01/7a86010faa92e767615a34c7cef08531.jpg" style="height:150px; width:270px;">
+        <br><br>
+        <button id="open">Open this notebook</button>
 
           </div>
 
         <br><br>
 
-          <div class="col-lg-4  h-80" style="padding:20px; background-color:#ffffff40; box-shadow:0 6px 12px rgba(164, 164, 164, 0.404); border-radius:40px;"  style="height:100px;">
+          <div class="col-lg-4  h-80" style="padding:20px; background-color:#ffffff40; box-shadow:0 6px 12px rgba(164, 164, 164, 0.404);"  style="height:100px;">
 
         <br>
             
-            <h3 style="text-align:center;">ICT</h3>
-            <h4 style="text-align:center;">Mr. Renn Santos</h4>
+            <h6>ICT</h6>
+            <h6>Mr. Renn Santos</h6>
 
-        <button class="btn btn-info" style="text-align:center; ">Open this notebook</button>
+            <img src="https://i.pinimg.com/736x/7a/86/01/7a86010faa92e767615a34c7cef08531.jpg" style="height:150px; width:270px;">
+        <br><br>
+        <button id="open">Open this notebook</button>
 
-
+     
           </div>
 
             <br>
@@ -220,16 +232,6 @@
 </div>
    <br>
   
-
-
-
-
-<center>
-<div class="footer">
-<p>© Almiron | 9 - Emerald</p>
-</div>
-</center>
-
     
 </body>
 </html>
