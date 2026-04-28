@@ -11,7 +11,7 @@
     <style>
 
         body{
-        background-image:url(https://i.pinimg.com/736x/24/cb/ea/24cbeab89f9ad4d593f5f3e8f6dfbc73.jpg);
+        background-image:url(https://i.pinimg.com/control1/1200x/a3/6e/ca/a36eca402f46a61c241e785da5990683.jpg);
         background-repeat:no-repeat;
         background-size:cover;
         }
@@ -25,7 +25,8 @@
         height:400px;
         margin-top:40px;
         border-radius:50px;
-        padding:20px;
+        padding:20px; 
+        border-color: rgba(122, 52, 97, 0.438);
 
         }
 
@@ -57,20 +58,33 @@
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
         }
 
+        #login{
+        border-radius:20px;
+        width:100px;
+        background-color: rgb(255, 192, 206);
+        border-color: rgba(240, 248, 255, 0.438);
+        }
+
+        #cancel{
+        border-radius:20px;
+        width:100px;
+        background-color: rgb(255, 192, 206);
+        border-color: rgba(240, 248, 255, 0.438);
+        }
+
     </style>
 </head>
 <body>
 
     <center>
-    <div class="logbox">
+    <div class="logbox"> 
     <form>
 
-        <h2>Login Form</h2>
+        <h2 style="margin-top:20px;">Login Form</h2>
         <label for="user">Username</label>
             <br>
             <input type="text" id="user" class="form-control" placeholder="Enter your Username" required>
             <br>  
-
 
         <label for="pass">Password</label>
             <br>
@@ -84,17 +98,13 @@
         <input class="form-check-input" type="checkbox" id="Stay">
 
         <h6 style="font-size:15px;">Stay logged in on this account</h6>
+        </div>
 
         <br>
-
-        <input type="button" name="button" id="login" value="Login" class="btn btn-info rounded-10 justify-content-center" onclick="authenticate()">
-
-     
-
-    </form>
-
-       <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-10 justify-content-center">    
+        <input type="button" name="button" id="login" value="Login" onclick="authenticate()">
+        <input type="reset" name="button" id="cancel" value="cancel">    
     
+    </form>
     </div>
 
     <script>
@@ -129,7 +139,7 @@
                 alert(denied);
                 document.getElementById("login").disabled = true; //lock
             }
-        }
+    }
     }
     </script>
 
