@@ -86,11 +86,20 @@
   <a href="#">Notebooks</a>
   <a href="#">Contact</a>
 
-   <a href="#logout" type="button" class="btn btn-sm" style="background-color: rgba(227, 194, 237, 0.781); color: white; width: 150px; border-color: rgba(240, 248, 255, 0.438);" onclick="LogOut()">Logout ➜]</a>
+   <a href="#logout" type="button" class="btn btn-sm" style="background-color: rgba(227, 194, 237, 0.781); color: white; width: 150px; border-color: rgba(240, 248, 255, 0.438);" onclick="Logout()">Logout ➜]</a>
 
 </div>
     </div>
 
+    <script>
+        function Logout(){
+        let confirmLogout = confirm("Exit"); 
+            
+            if (confirmLogout) {
+                window.location.href = "index.html"; //go back to login 
+            }
+        } 
+</script>
 <br>
 
 <div class="col-lg-9" style="margin-top:50px;">
